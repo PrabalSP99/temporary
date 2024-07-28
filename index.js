@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 const app= express();
 const cors = require('cors')
 
-// const process =require("dotenv").config();
+const process =require("dotenv").config();
 
 
 
@@ -19,7 +19,7 @@ const cors = require('cors')
 //     console.log(err);
 // });
 
-const port = 5000
+const port = 5000 || process.env.PORT
 app.use(cors(
     {
       origin: "http://localhost:3000",
